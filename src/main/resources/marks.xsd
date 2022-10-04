@@ -1,0 +1,21 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  targetNamespace="http://springsoapexample.chandimal.com/dtos/marks"
+  xmlns:tns="http://springsoapexample.chandimal.com/dtos/marks"
+  elementFormDefault="qualified">
+
+  <xs:element name="getMarksRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="marks" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="getMarksResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="grade" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

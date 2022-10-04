@@ -1,0 +1,29 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  targetNamespace="http://springsoapexample.chandimal.com/dtos/student"
+  xmlns:tns="http://springsoapexample.chandimal.com/dtos/student"
+  elementFormDefault="qualified">
+
+  <xs:element name="getStudentRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="studentid" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="getStudentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="student" type="tns:student" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="student">
+    <xs:sequence>
+      <xs:element name="studentid" type="xs:string"></xs:element>
+      <xs:element name="name" type="xs:string"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
