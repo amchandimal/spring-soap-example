@@ -32,6 +32,22 @@
 			<artifactId>wsdl4j</artifactId>
 		</dependency>
 
+<!--		Add these if your JVM is 1.8 + -->
+
+<!--		&lt;!&ndash; JAXB API &ndash;&gt;-->
+<!--		<dependency>-->
+<!--			<groupId>javax.xml.bind</groupId>-->
+<!--			<artifactId>jaxb-api</artifactId>-->
+<!--			<version>2.3.1</version>-->
+<!--		</dependency>-->
+
+<!--		&lt;!&ndash; JAXB RI &ndash;&gt;-->
+<!--		<dependency>-->
+<!--			<groupId>com.sun.xml.bind</groupId>-->
+<!--			<artifactId>jaxb-impl</artifactId>-->
+<!--			<version>2.3.4</version>-->
+<!--		</dependency>-->
+
 	</dependencies>
 
 	<build>
@@ -40,25 +56,25 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>jaxb2-maven-plugin</artifactId>
-				<version>1.6</version>
+<!--			<plugin>-->
+<!--				<groupId>org.codehaus.mojo</groupId>-->
+<!--				<artifactId>jaxb2-maven-plugin</artifactId>-->
+<!--				<version>1.6</version>-->
 
-				<executions>
-					<execution>
-						<id>xjc-schema1</id>
-						<goals>
-							<goal>xjc</goal>
-						</goals>
-						<configuration>
-							<schemaDirectory>${basedir}/src/main/resources</schemaDirectory>
-							<outputDirectory>${basedir}/src/main/java/</outputDirectory>
-							<clearOutputDir>false</clearOutputDir>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
+<!--				<executions>-->
+<!--					<execution>-->
+<!--						<id>xjc-schema1</id>-->
+<!--						<goals>-->
+<!--							<goal>xjc</goal>-->
+<!--						</goals>-->
+<!--						<configuration>-->
+<!--							<schemaDirectory>${basedir}/src/main/resources</schemaDirectory>-->
+<!--							<outputDirectory>${basedir}/src/main/java/</outputDirectory>-->
+<!--							<clearOutputDir>false</clearOutputDir>-->
+<!--						</configuration>-->
+<!--					</execution>-->
+<!--				</executions>-->
+<!--			</plugin>-->
 
 		</plugins>
 	</build>
